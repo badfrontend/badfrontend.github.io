@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Badfrontent",
+  title: "Badfrontent - Между div и span",
   description: "Между div и span",
 };
 
