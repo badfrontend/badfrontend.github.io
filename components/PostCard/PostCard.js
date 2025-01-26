@@ -14,7 +14,7 @@ const PostCard = ({ post }) => {
             <div className="
               px-2 py-0
               bg-white
-              font-bold text-[32px] text-xl inline text-gray-700
+              font-bold text-xl lg:text-[22px] xl:text-[28px] inline text-gray-700
               group-hover:bg-black
               group-hover:text-white
               transition-all duration-500"
@@ -26,7 +26,7 @@ const PostCard = ({ post }) => {
             <div className="
               px-2 py-0
               bg-white
-              text-xl inline whitespace-nowrap text-gray-700
+              text-md lg:text-[16px] xl:text-[22px] inline whitespace-nowrap text-gray-700
               group-hover:bg-black group-hover:text-white
               transition-all duration-500"
             >

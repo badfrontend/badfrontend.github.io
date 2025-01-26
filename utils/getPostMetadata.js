@@ -17,6 +17,7 @@ export const getPostMetadata = (basePath) => {
             description: matterResukt.data.description,
             backgroundImage: matterResukt.data.backgroundImage,
             slug: filename.replace('.mdx', ''),
+            isHidden: matterResukt.data.isHidden,
         }
     })
     return posts;
