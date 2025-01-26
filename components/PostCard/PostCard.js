@@ -5,7 +5,7 @@ const PostCard = ({ post }) => {
   return (
     <Link href={`/posts/${slug}`} className="block relative group">
       <article
-        className="aspect-[1.91/1] rounded-2xl overflow-hidden relative bg-cover bg-center transition-transform duration-300 hover:scale-105"
+        className="aspect-[1.5/1] rounded-2xl overflow-hidden relative bg-cover bg-center transition-transform duration-300 hover:scale-105"
         style={{ backgroundImage: `url(${backgroundImage})` }}
       >
         {/* Заголовок */}
