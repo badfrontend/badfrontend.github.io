@@ -4,15 +4,14 @@ import Image from "next/image";
 
 export default function Home() {
   const postMetaData = getPostMetadata('posts');
-  console.log(postMetaData)
 
   return (
-    <main>
-      <div>
+    <div className="container mx-auto px-4 py-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {postMetaData.map((post, postIndex) => {
           return <PostCard key={postIndex} post={post}/>
         })}
       </div>
-    </main>
+    </div>
   )
 };

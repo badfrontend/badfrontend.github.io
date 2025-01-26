@@ -1,3 +1,5 @@
+import Header from '@/components/Header/Header';
+import PostContent from '@/components/PostContent/PostContent';
 import { getPostMetadata } from '@/utils/getPostMetadata';
 import fs from 'fs'
 import matter from 'gray-matter';
@@ -5,7 +7,7 @@ import Markdown from 'markdown-to-jsx';
 
 const getPostContent = (slug) => {
     const folder = 'posts/'
-    const file = folder + `${slug}.md`
+    const file = folder + `${slug}.mdx`
     const content = fs.readFileSync(file, 'utf8');
 
     const matterResult = matter(content)
@@ -35,9 +37,10 @@ export const PostPage = async props => {
     const post = getPostContent(slug)
     return (
         <div>
-            <article>
+            <Header title={post.data.title} description={post.data.description} backgroundImage={post.data.backgroundImage} />
+            <PostContent>
                 <Markdown>{post.content}</Markdown>
-            </article>
+            </PostContent>
         </div>
     )
 }
